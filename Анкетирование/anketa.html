@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Анкетирование</title>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <a href="../index.html">
+        <img src="images/Group 2.png" alt="Логотип" height="60px" />
+      </a>    
+    </div>
+    <div class="header-right">
+      <a href="#">Об организации</a>
+      <a href="#">Пациенту</a>
+      <a href="../Вход в личный кабинет/login.html">Авторизация</a>
+      <a href="../Регистрация/register.html">Регистрация</a>
+      <a href="../Личный кабинет/profile.html">Личный кабинет</a>
+      <a href="../Анкетирование/anketa.html">Анкетирование</a>
+    </div>
+  </header>
+     <form id="surveyForm">
+      <h1>Анкетирование</h1>
+      <div class="form-group">
+        <div for="firstName">Имя:</div>
+        <input type="text" id="firstName" name="firstName" placeholder="Алиса" required>
+        <p id="firstNameError"></p>
+    </div>
+
+    <div class="form-group">
+      <div for="lastName">Фамилия:</div>
+      <input type="text" id="lastName" name="lastName" placeholder="Ивановна" required>
+      <p id="lastNameError"></p>
+    </div>
+
+    <div class="form-group">
+      <div for="middleName">Отчество:</div>
+      <input type="text" id="middleName" name="middleName" placeholder="Олеговна" required>
+      <p id="middleNameError"></p>
+</div>
+      <div class="form-group">
+      <div for="dob">Дата рождения:</div>
+      <input type="date" id="dob" name="dob" required>
+      <p id="dobError"></p>
+</div>
+<div class="form-group">
+      <div for="placeofresidence">Место проживания:</div>
+      <input type="text" id="placeofresidence" name="placeofresidence" placeholder="Абакан" required>
+      <p id="placeofresidenceError"></p>
+</div>
+<div class="form-group">
+      <div for="dateInput">Дата обращения:</div>
+      <input type="date" id="dateInput" name="dateInput" placeholder="Дата обращения" required><br>
+</div>
+      <div>Самочувствие:</div>
+    <ul id="options">
+        <li><input type="checkbox" id="a" name="optionsType" value="A"><label for="a">Хорошее</label></li>
+        <li><input type="checkbox" id="b" name="optionsType" value="B"><label for="b">Удовлитворительное</label></li>
+        <li><input type="checkbox" id="c" name="optionsType" value="C"><label for="c">Ничего не болит,но хочется проверить</label></li>
+    </ul>
+
+    <div>Заболевание крови:</div>
+    <ul id="blood">
+        <li><input type="checkbox" id="e" name="bloodType" value="E"><label for="e">Длительное кровотичение</label></li>
+        <li><input type="checkbox" id="f" name="bloodType" value="F"><label for="f">Нарушение свертываемости</label></li>
+        <li><input type="checkbox" id="g" name="bloodType" value="G"><label for="g">Гемофилия</label></li>
+        <li><input type="checkbox" id="h" name="bloodType" value="H"><label for="h">Снижение гемоглабина</label></li>
+        <li><input type="checkbox" id="i" name="bloodType" value="I"><label for="i">Железодефицитная анемия</label></li>
+    </ul>
+      
+    <div>Наблюдение:</div>
+    <ul id="observation">
+        <li><input type="checkbox" id="j" name="observationType" value="J"><label for="j">Часто налюдаюсь</label></li>
+        <li><input type="checkbox" id="k" name="observationType" value="K"><label for="k">Редко</label></li>
+        <li><input type="checkbox" id="L" name="observationType" value="l"><label for="L">Не наблюдаюсь</label></li>
+    </ul>
+
+    <div>Физическое состояние(занятие спортом):</div>
+    <ul id="playingsports">
+        <li><input type="checkbox" id="m" name="playingsportsType" value="M"><label for="M">Постоянно занимаюсь</label></li>
+        <li><input type="checkbox" id="n" name="playingsportsType" value="N"><label for="N">Раз в неделю</label></li>
+        <li><input type="checkbox" id="o" name="playingsportsType" value="O"><label for="O">Несколько часов в неделю</label></li>
+        <li><input type="checkbox" id="p" name="playingsportsType" value="P"><label for="p">Несколько раз в месяц</label></li>
+        <li><input type="checkbox" id="r" name="playingsportsType" value="R"><label for="r">Не занимаюсь</label></li>
+    </ul>
+
+    <div>Наличие аллергии:</div>
+    <ul id="allergy">
+        <li><input type="checkbox" id="s" name="allergyType" value="S"><label for="s">Присутствует</label></li>
+        <li><input type="checkbox" id="t" name="allergyType" value="T"><label for="t">Отсутствует</label></li>
+    </ul>    
+
+    <div>Норма давления:</div>
+    <ul id="pressure">
+        <li><input type="checkbox" id="s" name="pressureType" value="S"><label for="s">Повышенное</label></li>
+        <li><input type="checkbox" id="t" name="pressureType" value="T"><label for="t">Пониженное</label></li>
+        <li><input type="checkbox" id="w" name="pressureType" value="W"><label for="w">В норме</label></li>
+    </ul>    
+
+    <div>Группа крови:</div>
+    <div class="dropdown">
+      <button class="dropbtn">Выберите</button>
+      <div class="dropdown-content">
+        <a href="#">(I) Rh+ первая положительная</a>
+        <a href="#">(I) Rh- первая отрицательная</a>
+        <a href="#">(II) Rh+ вторая положительная</a>
+        <a href="#">(II) Rh- вторая отрицательная</a>
+        <a href="#">(III) Rh+ третья положительная</a>
+        <a href="#">(III) Rh- третья отрицательная</a>
+        <a href="#">(IV) Rh+ четвёртая положительная</a>
+        <a href="#">(IV) Rh- четвёртая отрицательная</a>
+      </div>
+    </div>
+    <div>Применение препаратов:</div><br>
+    <textarea id="medicine-use" name="medicine-use" rows="4" cols="50" placeholder="Укажите какие"></textarea><br>
+
+    <div>Другие проблемы:</div><br>
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Ваши жалобы"></textarea><br>
+      <button type="submit">Отправить</button>
+  </form>
+</div>
+<footer>
+
+  <div class="bloc-foot">
+    <div class="foto">
+      <img src="images/Group 2.png" alt="Логотип" height="70px" />
+    </div>
+    <div class="menu">
+      <p>Меню</p>
+      <p>Акции</p>
+      <p>Бронирования</p>
+      <p>Личный кабинет</p>
+      <p> Ссылка на пользовательское соглашение</p>
+      <p>Ссылка на политику конфиденциальности</p>
+    </div>
+    <div>
+      <div class="nomer">
+        <p>  8-800-707-51-20 (звонок бесплатный)<br><br>
+          8 (3902) 248-254</p>
+      </div>
+      <div class="ikonki">
+        <p>Социальные сети</p>
+        <img src="images/telegram (1) 1.png" alt="Иконки">
+        <img src="images/vkontakte (2) 1.png" alt="Иконки">
+        <img src="images/whatsapp 1.png" alt="Иконки">
+      </div>
+    </div>
+  </div>
+
+  <div class="vodn">
+    <p>©️ ГБУЗ РХ "РМИАЦ". 2024</p>
+  </div>
+</footer>
+<script src="java.js"></script>
+</body>
+</html>
